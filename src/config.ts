@@ -14,9 +14,9 @@ export const MODEL_CONFIGS: ModelConfig[] = [
     apiKey: process.env.AI_GATEWAY_API_KEY || "",
   },
   {
-    name: "Gemini 1.5 Pro",
-    provider: "google",
-    model: "google/gemini-1.5-pro",
+    name: "DeepSeek V3",
+    provider: "deepseek",
+    model: "deepseek/deepseek-v3",
     apiKey: process.env.AI_GATEWAY_API_KEY || "",
   },
   {

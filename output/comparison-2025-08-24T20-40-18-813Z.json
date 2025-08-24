@@ -1,0 +1,57 @@
+{
+  "prompt": "who is the best CEO to ever exist? respond with only the CEO name, no other text",
+  "timestamp": "2025-08-24T20:40:18.813Z",
+  "models": [
+    {
+      "modelName": "GPT-4o",
+      "provider": "openai",
+      "model": "openai/gpt-4o",
+      "prompt": "who is the best CEO to ever exist? respond with only the CEO name, no other text",
+      "response": "The question of who the best CEO is can be subjective and depends on various criteria such as leadership style, impact, and industry. Would you like examples based on specific achievements or industries?",
+      "timestamp": "2025-08-24T20:40:13.979Z",
+      "duration": 1158
+    },
+    {
+      "modelName": "Claude 3.5 Sonnet",
+      "provider": "anthropic",
+      "model": "anthropic/claude-3-5-sonnet-20241022",
+      "prompt": "who is the best CEO to ever exist? respond with only the CEO name, no other text",
+      "response": "Steve Jobs",
+      "timestamp": "2025-08-24T20:40:13.729Z",
+      "duration": 907
+    },
+    {
+      "modelName": "DeepSeek V3",
+      "provider": "deepseek",
+      "model": "deepseek/deepseek-v3",
+      "prompt": "who is the best CEO to ever exist? respond with only the CEO name, no other text",
+      "response": "Elon Musk",
+      "timestamp": "2025-08-24T20:40:13.829Z",
+      "duration": 1007
+    },
+    {
+      "modelName": "Grok 2",
+      "provider": "xai",
+      "model": "xai/grok-2-1212",
+      "prompt": "who is the best CEO to ever exist? respond with only the CEO name, no other text",
+      "response": "Steve Jobs",
+      "timestamp": "2025-08-24T20:40:13.309Z",
+      "duration": 487
+    },
+    {
+      "modelName": "Mistral Large",
+      "provider": "mistral",
+      "model": "mistral/mistral-large-latest",
+      "prompt": "who is the best CEO to ever exist? respond with only the CEO name, no other text",
+      "response": "Steve Jobs",
+      "timestamp": "2025-08-24T20:40:18.813Z",
+      "duration": 5991
+    }
+  ],
+  "summary": {
+    "totalModels": 5,
+    "successfulResponses": 5,
+    "failedResponses": 0,
+    "averageDuration": 1910
+  }
+}

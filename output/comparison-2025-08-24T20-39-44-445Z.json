@@ -1,0 +1,58 @@
+{
+  "prompt": "who is the best CEO to ever exist? respond with only the CEO name, no other text",
+  "timestamp": "2025-08-24T20:39:44.445Z",
+  "models": [
+    {
+      "modelName": "GPT-4o",
+      "provider": "openai",
+      "model": "openai/gpt-4o",
+      "prompt": "who is the best CEO to ever exist? respond with only the CEO name, no other text",
+      "response": "This is subjective and open to interpretation.",
+      "timestamp": "2025-08-24T20:39:44.445Z",
+      "duration": 932
+    },
+    {
+      "modelName": "Claude 3.5 Sonnet",
+      "provider": "anthropic",
+      "model": "anthropic/claude-3-5-sonnet-20241022",
+      "prompt": "who is the best CEO to ever exist? respond with only the CEO name, no other text",
+      "response": "Steve Jobs",
+      "timestamp": "2025-08-24T20:39:44.319Z",
+      "duration": 805
+    },
+    {
+      "modelName": "Gemini 1.5 Pro",
+      "provider": "google",
+      "model": "google/gemini-1.5-pro-002",
+      "prompt": "who is the best CEO to ever exist? respond with only the CEO name, no other text",
+      "response": "",
+      "timestamp": "2025-08-24T20:39:43.771Z",
+      "duration": 257,
+      "error": "Vercel AI Gateway access failed. If you want to use AI SDK providers directly, use the providers, e.g. @ai-sdk/openai, or register a different global default provider."
+    },
+    {
+      "modelName": "Grok 2",
+      "provider": "xai",
+      "model": "xai/grok-2-1212",
+      "prompt": "who is the best CEO to ever exist? respond with only the CEO name, no other text",
+      "response": "Steve Jobs",
+      "timestamp": "2025-08-24T20:39:44.149Z",
+      "duration": 635
+    },
+    {
+      "modelName": "Mistral Large",
+      "provider": "mistral",
+      "model": "mistral/mistral-large-latest",
+      "prompt": "who is the best CEO to ever exist? respond with only the CEO name, no other text",
+      "response": "Steve Jobs",
+      "timestamp": "2025-08-24T20:39:44.017Z",
+      "duration": 503
+    }
+  ],
+  "summary": {
+    "totalModels": 5,
+    "successfulResponses": 4,
+    "failedResponses": 1,
+    "averageDuration": 626.4
+  }
+}
