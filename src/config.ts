@@ -16,7 +16,7 @@ export const MODEL_CONFIGS: ModelConfig[] = [
   {
     name: "Gemini 1.5 Pro",
     provider: "google",
-    model: "google/gemini-1.5-pro-latest",
+    model: "google/gemini-1.5-pro",
     apiKey: process.env.AI_GATEWAY_API_KEY || "",
   },
   {
