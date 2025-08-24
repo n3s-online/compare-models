@@ -1,0 +1,44 @@
+{
+  "name": "compare-models",
+  "version": "1.0.0",
+  "description": "CLI tool to compare AI model outputs using Vercel AI SDK V5",
+  "main": "dist/cli.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/cli.ts",
+    "start": "node dist/cli.js",
+    "run-all": "ts-node src/cli.ts run-all",
+    "clean": "rm -rf dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "compare-models": "./dist/cli.js"
+  },
+  "keywords": [
+    "ai",
+    "cli",
+    "comparison",
+    "openai",
+    "anthropic",
+    "google",
+    "mistral",
+    "xai",
+    "grok"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "^2.0.6",
+    "@ai-sdk/google": "^2.0.8",
+    "@ai-sdk/mistral": "^2.0.9",
+    "@ai-sdk/openai": "^2.0.19",
+    "@ai-sdk/xai": "^2.0.11",
+    "ai": "^5.0.22",
+    "commander": "^14.0.0"
+  }
+}
