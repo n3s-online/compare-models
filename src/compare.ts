@@ -2,7 +2,7 @@ import * as fs from "fs/promises";
 import * as path from "path";
 import { MODEL_CONFIGS, validateApiKeys } from "./config";
 import { generateWithModel } from "./models";
-import { ComparisonResult, ModelResponse } from "./types";
+import { ComparisonResult } from "./types";
 import { Logger } from "./logger";
 
 export async function runAllModels(
@@ -15,22 +15,15 @@ export async function runAllModels(
   const { valid, invalid } = validateApiKeys();
 
   if (invalid.length > 0) {
-    console.warn(
-      "⚠️  Missing API keys for:",
-      invalid.map((c) => c.name).join(", ")
+    logger.warning("Missing AI Gateway API key");
+    logger.warning(
+      "Please set the AI_GATEWAY_API_KEY environment variable to use all models"
     );
-    console.warn(
-      "These models will be skipped. Set the following environment variables:"
-    );
-    invalid.forEach((config) => {
-      const envVar = getEnvVarName(config.provider);
-      console.warn(`  - ${envVar} for ${config.name}`);
-    });
   }
 
   if (valid.length === 0) {
     throw new Error(
-      "No valid API keys found. Please set at least one API key."
+      "No AI Gateway API key found. Please set the AI_GATEWAY_API_KEY environment variable."
     );
   }
 
@@ -92,21 +85,4 @@ async function saveResults(
   console.log(
     `⏱️  Average response time: ${Math.round(result.summary.averageDuration)}ms`
   );
-}
-
-function getEnvVarName(provider: string): string {
-  switch (provider) {
-    case "OpenAI":
-      return "OPENAI_API_KEY";
-    case "Anthropic":
-      return "ANTHROPIC_API_KEY";
-    case "Google":
-      return "GOOGLE_GENERATIVE_AI_API_KEY";
-    case "xAI":
-      return "XAI_API_KEY";
-    case "Mistral":
-      return "MISTRAL_API_KEY";
-    default:
-      return `${provider.toUpperCase()}_API_KEY`;
-  }
 }

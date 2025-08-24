@@ -1,10 +1,11 @@
 # AI Model Comparison Tool
 
-A TypeScript CLI tool that runs prompts through multiple AI models and compares their outputs. Built with the Vercel AI SDK V5.
+A TypeScript CLI tool that runs prompts through multiple AI models and compares their outputs. Built with the Vercel AI SDK V5 and AI Gateway.
 
 ## Features
 
 - 🤖 **5 Popular AI Models**: GPT-4o, Claude 3.5 Sonnet, Gemini 1.5 Pro, Grok 2, and Mistral Large
+- 🌐 **Vercel AI Gateway**: Single API key for all providers with automatic failover
 - ⚡ **Concurrent Processing**: Runs all models in parallel for faster results
 - 📊 **JSON Output**: Structured results with metadata and performance metrics
 - 🔧 **TypeScript**: Full type safety and modern development experience
@@ -30,15 +31,17 @@ cp .env.example .env
 # Edit .env with your API keys
 ```
 
-## API Keys Setup
+## API Key Setup
 
-You need at least one API key to use the tool. Set the following environment variables:
+You need a single Vercel AI Gateway API key to access all models:
 
-- `OPENAI_API_KEY` - OpenAI API key for GPT-4o
-- `ANTHROPIC_API_KEY` - Anthropic API key for Claude 3.5 Sonnet
-- `GOOGLE_GENERATIVE_AI_API_KEY` - Google API key for Gemini 1.5 Pro
-- `XAI_API_KEY` - xAI API key for Grok 2
-- `MISTRAL_API_KEY` - Mistral API key for Mistral Large
+1. Sign up for a [Vercel account](https://vercel.com) if you don't have one
+2. Go to your [Vercel Dashboard](https://vercel.com/dashboard)
+3. Navigate to the AI Gateway section
+4. Create an API key
+5. Set the environment variable: `AI_GATEWAY_API_KEY`
+
+The AI Gateway provides access to all supported models through a single API key with automatic failover and load balancing.
 
 ## Usage
 

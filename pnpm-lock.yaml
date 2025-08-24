@@ -8,21 +8,9 @@ importers:
 
   .:
     dependencies:
-      '@ai-sdk/anthropic':
-        specifier: ^2.0.6
-        version: 2.0.6(zod@3.25.76)
-      '@ai-sdk/google':
-        specifier: ^2.0.8
-        version: 2.0.8(zod@3.25.76)
-      '@ai-sdk/mistral':
-        specifier: ^2.0.9
-        version: 2.0.9(zod@3.25.76)
-      '@ai-sdk/openai':
-        specifier: ^2.0.19
-        version: 2.0.19(zod@3.25.76)
-      '@ai-sdk/xai':
-        specifier: ^2.0.11
-        version: 2.0.11(zod@3.25.76)
+      '@ai-sdk/gateway':
+        specifier: ^1.0.11
+        version: 1.0.11(zod@3.25.76)
       ai:
         specifier: ^5.0.22
         version: 5.0.22(zod@3.25.76)
@@ -42,38 +30,8 @@ importers:
 
 packages:
 
-  '@ai-sdk/anthropic@2.0.6':
-    resolution: {integrity: sha512-ZSAU1xUebumWF1ldgkq9nz8iT7Ew9DGTX8Z4c2mvmlexifxzOMdj9cNLld5DlRD5dr4ULjSnTZywPKyMlAEcdQ==}
-    engines: {node: '>=18'}
-    peerDependencies:
-      zod: ^3.25.76 || ^4
-
   '@ai-sdk/gateway@1.0.11':
     resolution: {integrity: sha512-ErwWS3sPOuWy42eE3AVxlKkTa1XjjKBEtNCOylVKMO5KNyz5qie8QVlLYbULOG56dtxX4zTKX3rQNJudplhcmQ==}
-    engines: {node: '>=18'}
-    peerDependencies:
-      zod: ^3.25.76 || ^4
-
-  '@ai-sdk/google@2.0.8':
-    resolution: {integrity: sha512-k+5SLtoV0qG4rSCxwWQ+/0qrJFXwYHQ1TcH4GyaP4X0qOuVS4NDtD8ymSu8ej0ejFluogtBfTLev7sbj2AnJzA==}
-    engines: {node: '>=18'}
-    peerDependencies:
-      zod: ^3.25.76 || ^4
-
-  '@ai-sdk/mistral@2.0.9':
-    resolution: {integrity: sha512-N64MTER1/JtMbk3TKUDVLxqBxwmo+m16jZWA4PZDt2HwRK9RclsCqKI1CXazuXqO2LsDXyJmnBZe1sl1xQNMRg==}
-    engines: {node: '>=18'}
-    peerDependencies:
-      zod: ^3.25.76 || ^4
-
-  '@ai-sdk/openai-compatible@1.0.11':
-    resolution: {integrity: sha512-eRD6dZviy31KYz4YvxAR/c6UEYx3p4pCiWZeDdYdAHj0rn8xZlGVxtQRs1qynhz6IYGOo4aLBf9zVW5w0tI/Uw==}
-    engines: {node: '>=18'}
-    peerDependencies:
-      zod: ^3.25.76 || ^4
-
-  '@ai-sdk/openai@2.0.19':
-    resolution: {integrity: sha512-sG3/IVaPvV7Vn6513I1bcJILHpLCXbVif2ht6CyROcB9FzXCJe2K5uRbAg30HWsdCEe7xu4OAWtMK6yWTOcsSA==}
     engines: {node: '>=18'}
     peerDependencies:
       zod: ^3.25.76 || ^4
@@ -87,12 +45,6 @@ packages:
   '@ai-sdk/provider@2.0.0':
     resolution: {integrity: sha512-6o7Y2SeO9vFKB8lArHXehNuusnpddKPk7xqL7T2/b+OvXMRIXUO1rR4wcv1hAFUAT9avGZshty3Wlua/XA7TvA==}
     engines: {node: '>=18'}
-
-  '@ai-sdk/xai@2.0.11':
-    resolution: {integrity: sha512-pGvEMiwuCXI3rCiBqVzJo7zjNsMz8Rm4SIjg77K59QI1ejuSBgC2CL79BwEmPVrwo6nby8eHNv212V4120wm4g==}
-    engines: {node: '>=18'}
-    peerDependencies:
-      zod: ^3.25.76 || ^4
 
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -208,37 +160,7 @@ packages:
 
 snapshots:
 
-  '@ai-sdk/anthropic@2.0.6(zod@3.25.76)':
-    dependencies:
-      '@ai-sdk/provider': 2.0.0
-      '@ai-sdk/provider-utils': 3.0.5(zod@3.25.76)
-      zod: 3.25.76
-
   '@ai-sdk/gateway@1.0.11(zod@3.25.76)':
-    dependencies:
-      '@ai-sdk/provider': 2.0.0
-      '@ai-sdk/provider-utils': 3.0.5(zod@3.25.76)
-      zod: 3.25.76
-
-  '@ai-sdk/google@2.0.8(zod@3.25.76)':
-    dependencies:
-      '@ai-sdk/provider': 2.0.0
-      '@ai-sdk/provider-utils': 3.0.5(zod@3.25.76)
-      zod: 3.25.76
-
-  '@ai-sdk/mistral@2.0.9(zod@3.25.76)':
-    dependencies:
-      '@ai-sdk/provider': 2.0.0
-      '@ai-sdk/provider-utils': 3.0.5(zod@3.25.76)
-      zod: 3.25.76
-
-  '@ai-sdk/openai-compatible@1.0.11(zod@3.25.76)':
-    dependencies:
-      '@ai-sdk/provider': 2.0.0
-      '@ai-sdk/provider-utils': 3.0.5(zod@3.25.76)
-      zod: 3.25.76
-
-  '@ai-sdk/openai@2.0.19(zod@3.25.76)':
     dependencies:
       '@ai-sdk/provider': 2.0.0
       '@ai-sdk/provider-utils': 3.0.5(zod@3.25.76)
@@ -255,13 +177,6 @@ snapshots:
   '@ai-sdk/provider@2.0.0':
     dependencies:
       json-schema: 0.4.0
-
-  '@ai-sdk/xai@2.0.11(zod@3.25.76)':
-    dependencies:
-      '@ai-sdk/openai-compatible': 1.0.11(zod@3.25.76)
-      '@ai-sdk/provider': 2.0.0
-      '@ai-sdk/provider-utils': 3.0.5(zod@3.25.76)
-      zod: 3.25.76
 
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
