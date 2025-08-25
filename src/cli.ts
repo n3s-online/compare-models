@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import { Command } from "commander";
 import { runAllModels } from "./compare";
 import { addModelsCommands } from "./models-cli";
+import { convertJsonToText } from "./convert";
 
 // Load environment variables from .env file
 dotenv.config();
@@ -37,6 +38,27 @@ program
       );
     } catch (error) {
       console.error("❌ Error running comparison:", error);
+      process.exit(1);
+    }
+  });
+
+program
+  .command("convert")
+  .description("Convert JSON comparison results to text format")
+  .option(
+    "-i, --input <file>",
+    "Input JSON file (defaults to most recent in output directory)"
+  )
+  .option(
+    "-o, --output <file>",
+    "Output text file (defaults to input filename with .txt extension)"
+  )
+  .action(async (options) => {
+    try {
+      await convertJsonToText(options.input, options.output);
+      console.log("✅ Conversion complete!");
+    } catch (error) {
+      console.error("❌ Error converting file:", error);
       process.exit(1);
     }
   });

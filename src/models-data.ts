@@ -13,6 +13,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Anthropic",
@@ -26,6 +27,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: false,
     hasReasoning: true,
+    textOrChatModel: true,
   },
   {
     company: "OpenAI",
@@ -39,6 +41,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "small",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "OpenAI",
@@ -52,6 +55,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Google",
@@ -65,6 +69,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "normal",
     canGenerateImage: true,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Google",
@@ -78,6 +83,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "normal",
     canGenerateImage: true,
     hasReasoning: true,
+    textOrChatModel: true,
   },
   {
     company: "OpenAI",
@@ -91,6 +97,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "small",
     canGenerateImage: true,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Anthropic",
@@ -104,6 +111,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "OpenAI",
@@ -117,6 +125,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "OpenAI",
@@ -130,6 +139,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "normal",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "OpenAI",
@@ -143,6 +153,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: true,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "OpenAI",
@@ -156,6 +167,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "small",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: false,
   },
   {
     company: "DeepSeek",
@@ -169,6 +181,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "normal",
     canGenerateImage: false,
     hasReasoning: true,
+    textOrChatModel: true,
   },
   {
     company: "OpenAI",
@@ -182,6 +195,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "normal",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Moonshot AI",
@@ -195,6 +209,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "normal",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Alibaba Cloud",
@@ -208,6 +223,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "normal",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Google",
@@ -221,6 +237,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: true,
     hasReasoning: true,
+    textOrChatModel: true,
   },
   {
     company: "Google",
@@ -234,6 +251,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "small",
     canGenerateImage: true,
     hasReasoning: true,
+    textOrChatModel: true,
   },
   {
     company: "DeepSeek",
@@ -247,6 +265,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "normal",
     canGenerateImage: false,
     hasReasoning: true,
+    textOrChatModel: true,
   },
   {
     company: "OpenAI",
@@ -260,6 +279,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: true,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "DeepSeek",
@@ -273,6 +293,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "normal",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Z.ai",
@@ -286,6 +307,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "normal",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Google",
@@ -299,6 +321,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "small",
     canGenerateImage: true,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "xAI",
@@ -312,6 +335,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: true,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "OpenAI",
@@ -325,6 +349,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "normal",
     canGenerateImage: true,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Anthropic",
@@ -338,6 +363,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "OpenAI",
@@ -351,6 +377,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "normal",
     canGenerateImage: false,
     hasReasoning: true,
+    textOrChatModel: true,
   },
   {
     company: "Alibaba Cloud",
@@ -364,6 +391,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "normal",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Anthropic",
@@ -377,6 +405,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Anthropic",
@@ -390,6 +419,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "normal",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "OpenAI",
@@ -403,6 +433,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "normal",
     canGenerateImage: false,
     hasReasoning: true,
+    textOrChatModel: true,
   },
   {
     company: "OpenAI",
@@ -416,6 +447,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "small",
     canGenerateImage: true,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "xAI",
@@ -429,6 +461,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: true,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Alibaba Cloud",
@@ -442,6 +475,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Alibaba Cloud",
@@ -455,6 +489,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "normal",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Meta",
@@ -468,6 +503,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "OpenAI",
@@ -481,6 +517,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "normal",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: false,
   },
   {
     company: "OpenAI",
@@ -494,6 +531,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: false,
     hasReasoning: true,
+    textOrChatModel: true,
   },
   {
     company: "Perplexity",
@@ -507,6 +545,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "normal",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Amazon Bedrock",
@@ -520,6 +559,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "normal",
     canGenerateImage: true,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Meta",
@@ -533,6 +573,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "normal",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Mistral",
@@ -546,6 +587,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "small",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "DeepSeek",
@@ -559,6 +601,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: false,
     hasReasoning: true,
+    textOrChatModel: true,
   },
   {
     company: "Vercel",
@@ -572,6 +615,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Z.ai",
@@ -585,6 +629,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "small",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Meta",
@@ -598,6 +643,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "small",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "xAI",
@@ -611,6 +657,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "small",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "xAI",
@@ -624,6 +671,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Anthropic",
@@ -637,6 +685,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "small",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Perplexity",
@@ -650,6 +699,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Meta",
@@ -663,6 +713,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "normal",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Perplexity",
@@ -676,6 +727,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "normal",
     canGenerateImage: false,
     hasReasoning: true,
+    textOrChatModel: true,
   },
   {
     company: "OpenAI",
@@ -689,6 +741,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "small",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "xAI",
@@ -702,6 +755,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: true,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Morph",
@@ -715,6 +769,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "normal",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "xAI",
@@ -728,6 +783,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: true,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "OpenAI",
@@ -741,6 +797,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "xAI",
@@ -754,6 +811,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "small",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Perplexity",
@@ -767,6 +825,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: false,
     hasReasoning: true,
+    textOrChatModel: true,
   },
   {
     company: "Mistral",
@@ -780,6 +839,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Vercel",
@@ -793,6 +853,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Mistral",
@@ -806,6 +867,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "normal",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Alibaba Cloud",
@@ -819,6 +881,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "normal",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "DeepSeek",
@@ -832,6 +895,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "OpenAI",
@@ -845,6 +909,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: false,
     hasReasoning: true,
+    textOrChatModel: true,
   },
   {
     company: "DeepSeek",
@@ -858,6 +923,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "normal",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Anthropic",
@@ -871,6 +937,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Amazon Bedrock",
@@ -884,6 +951,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "small",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Google",
@@ -897,6 +965,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "small",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Mistral",
@@ -910,6 +979,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "small",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Mistral",
@@ -923,6 +993,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "normal",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Mistral",
@@ -936,6 +1007,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Google",
@@ -949,6 +1021,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "small",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: false,
   },
   {
     company: "Cohere",
@@ -962,6 +1035,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "small",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: false,
   },
   {
     company: "Amazon Bedrock",
@@ -975,6 +1049,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "small",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "OpenAI",
@@ -988,6 +1063,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "small",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: false,
   },
   {
     company: "Meta",
@@ -1001,6 +1077,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "small",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Google",
@@ -1014,6 +1091,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "small",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: false,
   },
   {
     company: "OpenAI",
@@ -1027,6 +1105,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "small",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Meta",
@@ -1040,6 +1119,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Amazon Bedrock",
@@ -1053,6 +1133,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "small",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: false,
   },
   {
     company: "Cohere",
@@ -1066,6 +1147,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Cohere",
@@ -1079,6 +1161,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "normal",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Cohere",
@@ -1092,6 +1175,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Google",
@@ -1105,6 +1189,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "small",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: false,
   },
   {
     company: "Inception",
@@ -1118,6 +1203,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "small",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Meta",
@@ -1131,6 +1217,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "small",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Meta",
@@ -1144,6 +1231,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Meta",
@@ -1157,6 +1245,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "normal",
     canGenerateImage: true,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Meta",
@@ -1170,6 +1259,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "small",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Meta",
@@ -1183,6 +1273,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: true,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Mistral",
@@ -1196,6 +1287,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "small",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: false,
   },
   {
     company: "Mistral",
@@ -1209,6 +1301,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "small",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Mistral",
@@ -1222,6 +1315,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "normal",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Mistral",
@@ -1235,6 +1329,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "small",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Mistral",
@@ -1248,6 +1343,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "small",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: false,
   },
   {
     company: "Mistral",
@@ -1261,6 +1357,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "normal",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Mistral",
@@ -1274,6 +1371,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Mistral",
@@ -1287,6 +1385,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "normal",
     canGenerateImage: true,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Mistral",
@@ -1300,6 +1399,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "large",
     canGenerateImage: true,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Morph",
@@ -1313,6 +1413,7 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "normal",
     canGenerateImage: false,
     hasReasoning: false,
+    textOrChatModel: true,
   },
   {
     company: "Z.ai",
@@ -1326,5 +1427,6 @@ export const MODELS_DATA: ModelMetadata[] = [
     tier: "normal",
     canGenerateImage: true,
     hasReasoning: false,
+    textOrChatModel: true,
   },
 ];

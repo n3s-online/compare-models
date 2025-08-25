@@ -29,6 +29,11 @@ export function addModelsCommands(program: Command) {
     .option("-p, --provider <provider>", "Filter by provider")
     .option("--images", "Show only models that can generate images")
     .option("--reasoning", "Show only models with reasoning capabilities")
+    .option(
+      "--text-chat",
+      "Show only text/chat models (exclude embedding models)"
+    )
+    .option("--embedding", "Show only embedding models")
     .option("--json", "Output as JSON")
     .option("--csv", "Output as comma-separated identifiers")
     .action((options) => {
@@ -50,6 +55,12 @@ export function addModelsCommands(program: Command) {
       if (options.reasoning) {
         models = models.filter((m) => m.hasReasoning);
       }
+      if (options.textChat) {
+        models = models.filter((m) => m.textOrChatModel);
+      }
+      if (options.embedding) {
+        models = models.filter((m) => !m.textOrChatModel);
+      }
 
       if (options.json) {
         console.log(JSON.stringify(models, null, 2));
@@ -62,6 +73,7 @@ export function addModelsCommands(program: Command) {
           const capabilities = [];
           if (model.canGenerateImage) capabilities.push("🖼️  Images");
           if (model.hasReasoning) capabilities.push("🧠 Reasoning");
+          if (!model.textOrChatModel) capabilities.push("🔗 Embedding");
 
           console.log(`${index + 1}. ${model.modelName} (${model.company})`);
           console.log(`   ID: ${model.modelIdentifier}`);

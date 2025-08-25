@@ -8,6 +8,7 @@
     "dev": "ts-node src/cli.ts",
     "start": "node dist/cli.js",
     "run-all": "ts-node src/cli.ts run-all",
+    "convert": "ts-node src/cli.ts convert",
     "clean": "rm -rf dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

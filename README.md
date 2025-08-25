@@ -137,6 +137,8 @@ pnpm run dev models list --tier "large" --csv          # Large models
 pnpm run dev models list --company "Anthropic" --csv   # Anthropic models
 pnpm run dev models list --reasoning --csv              # Reasoning models
 pnpm run dev models list --images --csv                 # Image generation models
+pnpm run dev models list --text-chat --csv              # Text/chat models (exclude embeddings)
+pnpm run dev models list --embedding --csv              # Embedding models only
 
 # Quick model info
 pnpm run dev models info gpt-5                         # Detailed model info
@@ -256,6 +258,26 @@ This will:
 1. Send the prompt to the specified models (or all configured models if none specified)
 2. Display progress in the terminal
 3. Save results to `output/comparison-YYYY-MM-DDTHH-mm-ss-sssZ.json`
+
+### Converting Results to Text Format
+
+Convert JSON comparison results to a readable text format:
+
+```bash
+# Convert most recent comparison to text
+pnpm run convert
+
+# Convert specific file
+pnpm run convert -i output/comparison-2025-08-25T03-35-37-348Z.json
+
+# Convert with custom output filename
+pnpm run convert -i input.json -o output.txt
+```
+
+The text format includes:
+- The original prompt
+- Each model's response (or error message)
+- Summary statistics
 
 ## Output Format
 

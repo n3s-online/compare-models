@@ -17,6 +17,7 @@ export interface ModelMetadata {
   tier: "small" | "normal" | "large";
   canGenerateImage: boolean;
   hasReasoning: boolean;
+  textOrChatModel: boolean;
 }
 
 export interface ModelResponse {
