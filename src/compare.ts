@@ -32,7 +32,7 @@ export async function runAllModels(
   }
 
   // Validate API keys
-  const { valid, invalid } = validateApiKeys();
+  const { valid, invalid } = validateApiKeys(modelConfigs);
 
   if (invalid.length > 0) {
     logger.warning("Missing AI Gateway API key");
@@ -47,20 +47,11 @@ export async function runAllModels(
     );
   }
 
-  // Filter the model configs to only include valid ones
-  const validModelConfigs = modelConfigs.filter((config) =>
-    valid.some((validConfig) => validConfig.model === config.model)
-  );
-
-  console.log(
-    `🔄 Running prompt through ${validModelConfigs.length} models...`
-  );
+  console.log(`🔄 Running prompt through ${valid.length} models...`);
 
   // Run all models concurrently
-  const promises = validModelConfigs.map(async (config, index) => {
-    console.log(
-      `  ${index + 1}/${validModelConfigs.length} Starting ${config.name}...`
-    );
+  const promises = valid.map(async (config, index) => {
+    console.log(`  ${index + 1}/${valid.length} Starting ${config.name}...`);
     const result = await generateWithModel(config, prompt);
 
     if (result.error) {

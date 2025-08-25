@@ -38,17 +38,18 @@ export const MODEL_CONFIGS: ModelConfig[] = createModelConfigs(
   DEFAULT_COMPARISON_MODELS
 );
 
-export function validateApiKeys(): {
+export function validateApiKeys(modelConfigs?: ModelConfig[]): {
   valid: ModelConfig[];
   invalid: ModelConfig[];
 } {
   const apiKey = process.env.AI_GATEWAY_API_KEY;
+  const configsToValidate = modelConfigs || MODEL_CONFIGS;
 
   if (apiKey && apiKey.trim() !== "") {
     // All models are valid if we have the gateway API key
-    return { valid: MODEL_CONFIGS, invalid: [] };
+    return { valid: configsToValidate, invalid: [] };
   } else {
     // No models are valid without the gateway API key
-    return { valid: [], invalid: MODEL_CONFIGS };
+    return { valid: [], invalid: configsToValidate };
   }
 }
