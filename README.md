@@ -108,13 +108,53 @@ This tool supports 110+ AI models from major providers:
 
 For detailed information about each model including pricing, capabilities, and release dates, see the [Models Reference](docs/models-reference.md) or use the CLI exploration commands.
 
+## Quick Reference
+
+### Popular Model Combinations
+
+```bash
+# Latest flagship models
+--models "gpt-5,claude-sonnet-4,gemini-2.5-pro,grok-4"
+
+# Best reasoning models
+--models "claude-3.7-sonnet,deepseek-r1,o3,sonar-reasoning"
+
+# Cost-effective options
+--models "gpt-5-nano,ministral-3b,llama-3.1-8b,nova-micro"
+
+# Image generation capable
+--models "gpt-4o,gemini-2.5-pro,grok-4,pixtral-large"
+
+# Coding specialists
+--models "claude-opus-4,codestral,deepseek-v3.1,gpt-5"
+```
+
+### Command Shortcuts
+
+```bash
+# Get model lists for specific use cases
+pnpm run dev models list --tier "large" --csv          # Large models
+pnpm run dev models list --company "Anthropic" --csv   # Anthropic models
+pnpm run dev models list --reasoning --csv              # Reasoning models
+pnpm run dev models list --images --csv                 # Image generation models
+
+# Quick model info
+pnpm run dev models info gpt-5                         # Detailed model info
+pnpm run dev models search "claude"                    # Search by name
+pnpm run dev models cost                               # Sort by cost
+```
+
 ## Usage
 
 ### Model Comparison
 
 #### Development Mode
 ```bash
+# Run with default models
 pnpm run run-all --prompt "Your prompt here"
+
+# Run with specific models
+pnpm run run-all --prompt "Your prompt here" --models "gpt-5,claude-sonnet-4,gemini-2.5-pro"
 ```
 
 #### Production Mode
@@ -122,8 +162,11 @@ pnpm run run-all --prompt "Your prompt here"
 # Build the project
 pnpm run build
 
-# Run the built version
+# Run the built version with default models
 pnpm start run-all --prompt "Your prompt here"
+
+# Run with specific models
+pnpm start run-all --prompt "Your prompt here" --models "gpt-5,claude-sonnet-4"
 ```
 
 #### Custom Output Directory
@@ -149,6 +192,10 @@ pnpm run dev models list --reasoning
 
 # Show only image generation models
 pnpm run dev models list --images
+
+# Get comma-separated list of model identifiers (for use with --models)
+pnpm run dev models list --csv
+pnpm run dev models list --company "OpenAI" --csv
 ```
 
 #### Model Information
@@ -175,14 +222,38 @@ pnpm run dev models context
 pnpm run dev models stats
 ```
 
-## Example
+## Examples
 
+### Basic Usage
 ```bash
 pnpm run run-all --prompt "Explain quantum computing in simple terms"
 ```
 
+### Using Specific Models
+```bash
+# Compare reasoning models
+pnpm run run-all --prompt "Solve this logic puzzle" --models "claude-3.7-sonnet,deepseek-r1,o3"
+
+# Compare image generation models
+pnpm run run-all --prompt "Generate an image of a sunset" --models "gpt-4o,gemini-2.5-pro,grok-4"
+
+# Compare cost-effective models
+pnpm run run-all --prompt "Write a simple function" --models "gpt-5-nano,ministral-3b,llama-3.1-8b"
+```
+
+### Using CSV Output to Build Model Lists
+```bash
+# Get all OpenAI models and use them
+OPENAI_MODELS=$(pnpm run dev models list --company "OpenAI" --csv)
+pnpm run run-all --prompt "Your prompt" --models "$OPENAI_MODELS"
+
+# Get all reasoning models
+REASONING_MODELS=$(pnpm run dev models list --reasoning --csv)
+pnpm run run-all --prompt "Complex reasoning task" --models "$REASONING_MODELS"
+```
+
 This will:
-1. Send the prompt to all configured models
+1. Send the prompt to the specified models (or all configured models if none specified)
 2. Display progress in the terminal
 3. Save results to `output/comparison-YYYY-MM-DDTHH-mm-ss-sssZ.json`
 

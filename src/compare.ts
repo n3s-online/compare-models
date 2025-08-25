@@ -1,15 +1,35 @@
 import * as fs from "fs/promises";
 import * as path from "path";
-import { MODEL_CONFIGS, validateApiKeys } from "./config";
+import { MODEL_CONFIGS, validateApiKeys, createModelConfigs } from "./config";
 import { generateWithModel } from "./models";
 import { ComparisonResult } from "./types";
 import { Logger } from "./logger";
 
 export async function runAllModels(
   prompt: string,
-  outputDir: string
+  outputDir: string,
+  modelsString?: string
 ): Promise<void> {
   const logger = Logger.getInstance();
+
+  // Determine which models to use
+  let modelConfigs;
+  if (modelsString) {
+    const modelIdentifiers = modelsString.split(",").map((id) => id.trim());
+    console.log(`🎯 Using specified models: ${modelIdentifiers.join(", ")}`);
+    try {
+      modelConfigs = createModelConfigs(modelIdentifiers);
+    } catch (error) {
+      throw new Error(
+        `Invalid model identifier: ${
+          error instanceof Error ? error.message : error
+        }`
+      );
+    }
+  } else {
+    modelConfigs = MODEL_CONFIGS;
+    console.log(`🎯 Using default models`);
+  }
 
   // Validate API keys
   const { valid, invalid } = validateApiKeys();
@@ -27,11 +47,20 @@ export async function runAllModels(
     );
   }
 
-  console.log(`🔄 Running prompt through ${valid.length} models...`);
+  // Filter the model configs to only include valid ones
+  const validModelConfigs = modelConfigs.filter((config) =>
+    valid.some((validConfig) => validConfig.model === config.model)
+  );
+
+  console.log(
+    `🔄 Running prompt through ${validModelConfigs.length} models...`
+  );
 
   // Run all models concurrently
-  const promises = valid.map(async (config, index) => {
-    console.log(`  ${index + 1}/${valid.length} Starting ${config.name}...`);
+  const promises = validModelConfigs.map(async (config, index) => {
+    console.log(
+      `  ${index + 1}/${validModelConfigs.length} Starting ${config.name}...`
+    );
     const result = await generateWithModel(config, prompt);
 
     if (result.error) {

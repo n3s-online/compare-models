@@ -17,16 +17,20 @@ program
 
 program
   .command("run-all")
-  .description("Run a prompt through all configured AI models")
+  .description("Run a prompt through AI models")
   .requiredOption("-p, --prompt <prompt>", "The prompt to send to all models")
   .option("-o, --output <directory>", "Output directory for results", "output")
+  .option(
+    "-m, --models <models>",
+    "Comma-separated list of model identifiers (e.g., gpt-5,claude-sonnet-4)"
+  )
   .action(async (options) => {
     try {
-      console.log("🚀 Running prompt through all models...");
+      console.log("🚀 Running prompt through models...");
       console.log(`Prompt: "${options.prompt}"`);
       console.log(`Output directory: ${options.output}`);
 
-      await runAllModels(options.prompt, options.output);
+      await runAllModels(options.prompt, options.output, options.models);
 
       console.log(
         "✅ Comparison complete! Check the output directory for results."
