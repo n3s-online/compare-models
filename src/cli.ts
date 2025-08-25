@@ -3,6 +3,7 @@
 import dotenv from "dotenv";
 import { Command } from "commander";
 import { runAllModels } from "./compare";
+import { addModelsCommands } from "./models-cli";
 
 // Load environment variables from .env file
 dotenv.config();
@@ -35,5 +36,8 @@ program
       process.exit(1);
     }
   });
+
+// Add models exploration commands
+addModelsCommands(program);
 
 program.parse();

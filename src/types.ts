@@ -5,6 +5,20 @@ export interface ModelConfig {
   apiKey: string;
 }
 
+export interface ModelMetadata {
+  company: string;
+  modelName: string;
+  modelIdentifier: string;
+  context: number | null;
+  usdCostPerMillionInputTokens: number;
+  usdCostPerMillionOutputTokens: number | null;
+  providers: string[];
+  releaseDate: string;
+  tier: "small" | "normal" | "large";
+  canGenerateImage: boolean;
+  hasReasoning: boolean;
+}
+
 export interface ModelResponse {
   modelName: string;
   provider: string;
