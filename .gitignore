@@ -158,3 +158,4 @@ coverage/
 # Temporary files
 *.tmp
 *.temp
+output/ 
