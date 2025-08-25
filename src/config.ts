@@ -2,33 +2,39 @@ import { ModelConfig } from "./types";
 
 export const MODEL_CONFIGS: ModelConfig[] = [
   {
-    name: "GPT-4o",
+    name: "GPT-5",
     provider: "openai",
-    model: "openai/gpt-4o",
+    model: "openai/gpt-5",
     apiKey: process.env.AI_GATEWAY_API_KEY || "",
   },
   {
-    name: "Claude 3.5 Sonnet",
+    name: "Claude Sonnet 4",
     provider: "anthropic",
-    model: "anthropic/claude-3-5-sonnet-20241022",
+    model: "anthropic/claude-sonnet-4",
     apiKey: process.env.AI_GATEWAY_API_KEY || "",
   },
   {
-    name: "DeepSeek V3",
+    name: "DeepSeek V3.1",
     provider: "deepseek",
-    model: "deepseek/deepseek-v3",
+    model: "deepseek/deepseek-v3.1",
     apiKey: process.env.AI_GATEWAY_API_KEY || "",
   },
   {
-    name: "Grok 2",
+    name: "Grok 4",
     provider: "xai",
-    model: "xai/grok-2-1212",
+    model: "xai/grok-4",
     apiKey: process.env.AI_GATEWAY_API_KEY || "",
   },
   {
-    name: "Mistral Large",
-    provider: "mistral",
-    model: "mistral/mistral-large-latest",
+    name: "Gemini 2.5 Pro",
+    provider: "google",
+    model: "google/gemini-2.5-pro",
+    apiKey: process.env.AI_GATEWAY_API_KEY || "",
+  },
+  {
+    name: "Meta Llama 3.3 70B",
+    provider: "meta",
+    model: "meta/llama-3.3-70b",
     apiKey: process.env.AI_GATEWAY_API_KEY || "",
   },
 ];
