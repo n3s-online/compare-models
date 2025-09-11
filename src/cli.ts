@@ -25,13 +25,29 @@ program
     "-m, --models <models>",
     "Comma-separated list of model identifiers (e.g., gpt-5,claude-sonnet-4)"
   )
+  .option(
+    "-d, --delay <milliseconds>",
+    "Delay between batches of AI requests in milliseconds",
+    "2000"
+  )
+  .option("--no-cleanup", "Skip GPT-3.5-turbo cleanup step for responses")
   .action(async (options) => {
     try {
       console.log("🚀 Running prompt through models...");
       console.log(`Prompt: "${options.prompt}"`);
       console.log(`Output directory: ${options.output}`);
+      console.log(`Delay between batches: ${options.delay}ms`);
+      console.log(
+        `Response cleanup: ${options.cleanup ? "enabled" : "disabled"}`
+      );
 
-      await runAllModels(options.prompt, options.output, options.models);
+      await runAllModels(
+        options.prompt,
+        options.output,
+        options.models,
+        parseInt(options.delay),
+        options.cleanup
+      );
 
       console.log(
         "✅ Comparison complete! Check the output directory for results."

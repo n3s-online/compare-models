@@ -6,7 +6,8 @@ A TypeScript CLI tool that runs prompts through multiple AI models and compares 
 
 - 🤖 **110+ AI Models**: Comprehensive support for latest models from OpenAI, Anthropic, Google, DeepSeek, xAI, Meta, Mistral, Cohere, and more
 - 🌐 **Vercel AI Gateway**: Single API key for all providers with automatic failover
-- ⚡ **Concurrent Processing**: Runs all models in parallel for faster results
+- ⏱️ **Batch Processing**: Runs models in batches of 10 with configurable delays between batches
+- 🧹 **Response Cleanup**: Automatic GPT-3.5-turbo batch cleanup to remove thinking/formatting from responses
 - 📊 **Rich Metadata**: Detailed model information including costs, capabilities, and release dates
 - 🔍 **Model Explorer**: CLI commands to search, filter, and analyze models
 - 🧠 **Advanced Capabilities**: Support for reasoning models and image generation
@@ -175,6 +176,20 @@ pnpm start run-all --prompt "Your prompt here" --models "gpt-5,claude-sonnet-4"
 ```bash
 pnpm run run-all --prompt "Your prompt here" --output ./custom-output
 ```
+
+#### Batch Processing and Response Cleanup
+```bash
+# Add 5-second delays between batches (default is 2 seconds)
+pnpm run run-all --prompt "Your prompt here" --delay 5000
+
+# Skip the GPT-3.5-turbo cleanup step for faster processing
+pnpm run run-all --prompt "Your prompt here" --no-cleanup
+
+# Combine options for custom processing
+pnpm run run-all --prompt "Your prompt here" --delay 1000 --no-cleanup --models "gpt-5,claude-sonnet-4"
+```
+
+**Note**: Models are processed in batches of 10. Within each batch, models run concurrently for speed, but there's a configurable delay between batches to respect rate limits.
 
 ### Model Exploration
 
