@@ -28,7 +28,7 @@ program
   .option(
     "-d, --delay <milliseconds>",
     "Delay between batches of AI requests in milliseconds",
-    "2000"
+    "4000"
   )
   .option("--no-cleanup", "Skip GPT-3.5-turbo cleanup step for responses")
   .action(async (options) => {

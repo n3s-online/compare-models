@@ -51,7 +51,7 @@ export async function runAllModels(
   prompt: string,
   outputDir: string,
   modelsString?: string,
-  delayMs: number = 2000,
+  delayMs: number = 4000,
   enableCleanup: boolean = true
 ): Promise<void> {
   const logger = Logger.getInstance();
@@ -93,15 +93,15 @@ export async function runAllModels(
 
   console.log(`🔄 Running prompt through ${valid.length} models...`);
 
-  // Process models in batches of 10
-  const batchSize = 10;
+  // Process models in batches of 5
+  const batchSize = 5;
   const batches = [];
   for (let i = 0; i < valid.length; i += batchSize) {
     batches.push(valid.slice(i, i + batchSize));
   }
 
   console.log(
-    `📦 Processing ${batches.length} batches of up to ${batchSize} models each`
+    `📦 Processing ${batches.length} batches of up to ${batchSize} models each (4-second delays between batches)`
   );
 
   const allResponses: ModelResponse[] = [];
